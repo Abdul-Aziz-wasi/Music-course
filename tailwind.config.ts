@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation:{
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite"
+      
+      },
       colors: {
         primary: "#1E40AF", // customize your main color
         secondary: "#9333EA",

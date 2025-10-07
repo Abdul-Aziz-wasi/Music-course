@@ -1,3 +1,4 @@
+import CardSection from '@/components/CardSection';
 import { FeaturedSection } from '@/components/FeaturedSection';
 import HeroSection from '@/components/HeroSection';
 import WhychooseUs from '@/components/WhychooseUs';
@@ -10,6 +11,7 @@ const Home = () => {
         <HeroSection />
         <FeaturedSection></FeaturedSection>
         <WhychooseUs></WhychooseUs>
+        <CardSection></CardSection>
       </main>
     </div>
   );
