@@ -2,7 +2,6 @@
 import React from 'react'
 import courseData from '../data/music_course.json'
 import Link from 'next/link'
-import { Button } from './ui/moving-border'
 import { BackgroundGradient } from './ui/background-gradient'
 
 interface Course {
@@ -50,8 +49,7 @@ export const FeaturedSection = () => {
         </div>
       </div>
       <div className='text-center mt-20'>
-        <Link href={"/courses"}
-        > <Button>View All Courses</Button></Link>
+       <Link href={"/"} className='rounded-2xl p-4 border border-neutral-600  text-white bg-black hover:bg-gray-600'>Learn more </Link>
       </div>
 
     </div>
