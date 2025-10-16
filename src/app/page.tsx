@@ -1,5 +1,6 @@
 import CardSection from '@/components/CardSection';
 import { FeaturedSection } from '@/components/FeaturedSection';
+import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
 import Instructors from '@/components/Instructors';
 import UpcomingWebiners from '@/components/UpcomingWebiners';
@@ -16,6 +17,7 @@ const Home = () => {
         <CardSection></CardSection>
         <UpcomingWebiners></UpcomingWebiners>
         <Instructors></Instructors>
+        <Footer></Footer>
       </main>
     </div>
   );
