@@ -47,19 +47,29 @@ export const WavyBackground = ({
   };
 
   const init = () => {
-    canvas = canvasRef.current;
-    ctx = canvas.getContext("2d");
+  const canvasEl = canvasRef.current;
+  if (!canvasEl) return;
+
+  const ctx2d = canvasEl.getContext("2d");
+  if (!ctx2d) return;
+
+  canvas = canvasEl;
+  ctx = ctx2d;
+
+  w = ctx.canvas.width = window.innerWidth;
+  h = ctx.canvas.height = window.innerHeight;
+  ctx.filter = `blur(${blur}px)`;
+  nt = 0;
+
+  window.onresize = function () {
     w = ctx.canvas.width = window.innerWidth;
     h = ctx.canvas.height = window.innerHeight;
     ctx.filter = `blur(${blur}px)`;
-    nt = 0;
-    window.onresize = function () {
-      w = ctx.canvas.width = window.innerWidth;
-      h = ctx.canvas.height = window.innerHeight;
-      ctx.filter = `blur(${blur}px)`;
-    };
-    render();
   };
+
+  render();
+};
+
 
   const waveColors = colors ?? [
     "#38bdf8",
