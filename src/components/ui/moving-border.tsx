@@ -82,7 +82,7 @@ export const MovingBorder = ({
   ry?: string;
   [key: string]:  unknown;
 }) => {
-  const pathRef = useRef<SVGGeometryElement | null>(null);
+  const pathRef = useRef<SVGRectElement | null>(null);
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
@@ -121,7 +121,7 @@ export const MovingBorder = ({
           height="100%"
           rx={rx}
           ry={ry}
-          
+          ref={pathRef}
           
         />
       </svg>
